@@ -1,0 +1,15 @@
+# Fabanochi series
+def febonacciseries(n):
+    print("Number of sequence required: ")
+    list1 = [0,1]
+    for i in  range(2,n):
+        list1.append(list1[i-1]+list1[i-2])
+        if n == len(list1)-2:
+            break
+    return list1[:]
+
+    
+
+
+if __name__=="__main__":
+    print(febonacciseries(10))
