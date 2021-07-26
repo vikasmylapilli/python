@@ -1,0 +1,27 @@
+# Linear search
+def sequential_search(list1,n):
+    list1.sort()
+    if len(list1) == 0:
+        return "No number in the list"        
+        
+    else:
+        list1.sort()
+        center = len(list1)//2
+        if n < list1[center]:
+            for i in list1[:center]:
+                if i == n:
+                    return f" location of search element is {list1.index(i)} in the sorted list"
+        else:
+            for i in list1[center:]:
+                if i == n:
+                    return f" location of search element is {list1.index(i)} in the sorted list"
+
+
+    return "Number is outside the list"
+
+    
+
+if __name__ == "__main__":
+    b = int(input("Enter the number to search: "))
+    num = [5, 8, 9, 1, 2, 4, 100, 1001]
+    print(sequential_search(num,b))
