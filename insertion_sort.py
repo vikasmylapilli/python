@@ -1,8 +1,12 @@
 def insertion_sort(list):
     for i in range(1,len(list)):
-        for j in range(0,i):
-            if list[j] > list[i]:
-                list[i],list[j] = list[j],list[i]
+        for j in range(i,0,-1):
+            if list[j-1] > list[j]:
+                list[j-1],list[j] = list[j],list[j-1]
+
+            else:
+                continue
+
            
     return list
 
