@@ -1,6 +1,6 @@
 # Fabanochi series
 def febonacciseries(n):
-    print("Number of sequence required: ")
+    
     list1 = [0,1]
     for i in  range(2,n):
         list1.append(list1[i-1]+list1[i-2])
@@ -8,8 +8,7 @@ def febonacciseries(n):
             break
     return list1[:]
 
-    
-
-
 if __name__=="__main__":
-    print(febonacciseries(10))
+    n = int(input("Enter the number of series required: "))
+    print(febonacciseries(n))
+
