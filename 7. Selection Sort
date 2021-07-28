@@ -1,0 +1,17 @@
+#selction sort
+
+def selection_sort(arr):
+    for i in range(len(arr)):
+        # finding index of min in unsorted
+        a = arr[i:].index(min(arr[i:]))
+        if arr[i] > arr[i+a]:
+            arr[i],arr[i+a] = arr[i+a], arr[i]
+            
+
+        else:
+            continue
+
+    return arr
+if __name__=="__main__":
+    a = [6,8,9,1,5,62,90,15,2]
+    print(selection_sort(a))
