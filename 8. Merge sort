@@ -1,0 +1,34 @@
+# merge sort
+
+def merge(a,b):
+    c = []
+    while len(a) != 0 and len(b) != 0:
+        if a[0] < b[0]:
+            c.append(a[0])
+            a.remove(a[0])
+        
+        else:
+            c.append(b[0])
+            b.remove(b[0])
+
+    if len(a) == 0:
+        c += b    
+    else:
+        c += a
+
+    return c
+
+def merge_sort(arr):
+    if len(arr) == 0 or len(arr) == 1:
+        return arr
+
+    else:
+        a = merge_sort(arr[:len(arr)//2])        
+        b = merge_sort(arr[len(arr)//2:])
+
+        return merge(a,b)
+
+
+if __name__== "__main__":
+    list1 = [2,6,8,1,3,5,78,45,11,43]
+    print(merge_sort(list1))
