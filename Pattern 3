@@ -1,0 +1,6 @@
+import string
+arr = [x for x in string.ascii_lowercase]
+for i in range(0,10):
+        for j in range(0,i):
+            print(arr[j],end=" ")
+        print()
